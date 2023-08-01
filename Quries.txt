@@ -1,0 +1,45 @@
+mutation newUserSignUp($signUpData:signUpDataInput){
+  
+ newUser: userSignUp(signUpData:$signUpData){
+  	_id
+  	firstName
+  	lastName
+  	email
+  	password
+}
+}
+
+
+{
+  "signUpData": {
+    "firstName": "meet",
+    "lastName": "rumi",
+    "email": "meetrumi05@gmail.com",
+    "password": "password",
+    "cPassword": "password"
+  }
+}
+---------------------------------------------
+mutation UserSignIn($signInData:signInDataInput){
+  
+  userSignIn(signInData:$signInData){
+    token
+  }
+}
+
+{
+  "signInData": {
+    "email": "meetrumi01@gmail.com",
+    "password": "password"
+  }
+}
+--------------------------------------------------
+mutation userCreateQuote{
+  
+  createQuote(quoteData:"Hello i am ans Sattar")
+}
+
+{
+  "authorization":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGMyMDM4ZjJhMzA1NDJlMWFmZGI5MDAiLCJpYXQiOjE2OTA0NDc3MjZ9.QVycBku5edLAid2Y0sNRC2aHfi09_zebLEp-iqphCB0"
+}
+--------------------------------------------------
